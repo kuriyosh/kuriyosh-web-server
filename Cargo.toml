@@ -1,0 +1,13 @@
+[package]
+name = "test-juniper"
+version = "0.1.0"
+edition = "2021"
+authors = ["kuriyosh<yosyos0306@gmail.com>"]
+
+[dependencies]
+hyper = { version = "1.1.0", features = ["server", "http1"] }
+hyper-util = { version = "0.1.2", features = ["tokio"] }
+juniper = "0.15.11"
+# https://stackoverflow.com/questions/56607844/using-the-nightly-version-of-a-crate
+juniper_hyper = "0.8.0"
+tokio = { version = "1.35.1", features = ["full"] }
