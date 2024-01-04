@@ -1,5 +1,5 @@
 [package]
-name = "test-juniper"
+name = "kuriyosh-web-server"
 version = "0.1.0"
 edition = "2021"
 authors = ["kuriyosh<yosyos0306@gmail.com>"]
@@ -7,7 +7,9 @@ authors = ["kuriyosh<yosyos0306@gmail.com>"]
 [dependencies]
 hyper = { version = "1.1.0", features = ["server", "http1"] }
 hyper-util = { version = "0.1.2", features = ["tokio"] }
-juniper = "0.15.11"
-# https://stackoverflow.com/questions/56607844/using-the-nightly-version-of-a-crate
-juniper_hyper = "0.8.0"
+# TODO: v0.9.0 が出たら切り替える
+juniper = { git = "https://github.com/graphql-rust/juniper", branch = "master" }
+juniper_hyper = { git = "https://github.com/graphql-rust/juniper", branch = "master" }
+log = "0.4.20"
+pretty_env_logger = "0.5.0"
 tokio = { version = "1.35.1", features = ["full"] }
